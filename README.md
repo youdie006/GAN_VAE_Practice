@@ -28,19 +28,23 @@ MNIST 데이터셋을 활용한 VAE(Variational Autoencoder)와 GAN(Generative A
 ## 실험 결과
 
 ### VAE 성능
+![VAE Generation Results](vae_gen_imgs/gen_02300.png)
+![VAE Reconstruction Results](vae_recon_imgs/recon_02300.png)
+
 - 빠른 수렴 (1000 스텝 이내)
 - 안정적인 학습 곡선
 - 우수한 재구성 능력
 - 생성 이미지: 약간 흐리지만 명확한 숫자 형태
 
 ### GAN 성능
+![GAN Generation Results](gan_gen_imgs/gen_09300.png)
+
 - 안정화 기법 적용 후 성공적 학습
 - 5000 스텝 이후 명확한 숫자 생성
 - 더 선명한 이미지 품질
 - Label smoothing과 gradient clipping으로 mode collapse 방지
 
 ## 학습 환경
-- PyTorch
 - MPS/CUDA 지원
 - MNIST 데이터셋
 
