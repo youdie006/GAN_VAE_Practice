@@ -46,6 +46,7 @@ MNIST 데이터셋을 활용한 VAE(Variational Autoencoder)와 GAN(Generative A
 
 #### 재구성 결과
 ![VAE Reconstruction Results](vae_recon_imgs/recon_02300.png)
+
 *원본 이미지(상단)와 재구성된 이미지(하단) 비교 (Step 2300)*
 
 - 빠른 수렴 (1000 스텝 이내)
