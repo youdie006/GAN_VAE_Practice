@@ -31,9 +31,22 @@ MNIST 데이터셋을 활용한 VAE(Variational Autoencoder)와 GAN(Generative A
 ## 실험 결과
 
 ### VAE 성능
+
+#### 학습 곡선
 ![VAE Training Curves](VAE_output.png)
-![VAE Generation Results](vae_gen_imgs/gen_02300.png)
+*BCE Loss와 KLD Loss의 학습 진행 과정*
+
+#### 생성 결과 (학습 진행 과정)
+| Step 0 | Step 500 | Step 1000 | Step 2300 |
+|--------|----------|-----------|-----------|
+| ![](vae_gen_imgs/gen_00000.png) | ![](vae_gen_imgs/gen_00500.png) | ![](vae_gen_imgs/gen_01000.png) | ![](vae_gen_imgs/gen_02300.png) |
+| 초기 노이즈 | 형태 형성 중 | 숫자 생성 시작 | 최종 결과 |
+
+*Latent space에서 랜덤 샘플링하여 생성한 숫자 이미지*
+
+#### 재구성 결과
 ![VAE Reconstruction Results](vae_recon_imgs/recon_02300.png)
+*원본 이미지(상단)와 재구성된 이미지(하단) 비교 (Step 2300)*
 
 - 빠른 수렴 (1000 스텝 이내)
 - 안정적인 학습 곡선
@@ -41,8 +54,18 @@ MNIST 데이터셋을 활용한 VAE(Variational Autoencoder)와 GAN(Generative A
 - 생성 이미지: 약간 흐리지만 명확한 숫자 형태
 
 ### GAN 성능
+
+#### 학습 곡선
 ![GAN Training Curves](GAN_output.png)
-![GAN Generation Results](gan_gen_imgs/gen_09300.png)
+*Discriminator와 Generator의 Loss 변화 추이*
+
+#### 생성 결과 (학습 진행 과정)
+| Step 0 | Step 2000 | Step 5000 | Step 9300 |
+|--------|-----------|-----------|-----------|
+| ![](gan_gen_imgs/gen_00000.png) | ![](gan_gen_imgs/gen_02000.png) | ![](gan_gen_imgs/gen_05000.png) | ![](gan_gen_imgs/gen_09300.png) |
+| 초기 노이즈 | 패턴 형성 중 | 숫자 생성 성공 | 최종 결과 |
+
+*Generator가 노이즈에서 숫자를 생성하는 과정*
 
 - 안정화 기법 적용 후 성공적 학습
 - 5000 스텝 이후 명확한 숫자 생성
