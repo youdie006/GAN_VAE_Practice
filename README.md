@@ -9,7 +9,10 @@ MNIST 데이터셋을 활용한 VAE(Variational Autoencoder)와 GAN(Generative A
 ├── CV_22_week4.ipynb      # 메인 학습 노트북
 ├── vae_gen_imgs/          # VAE 생성 이미지
 ├── vae_recon_imgs/        # VAE 재구성 이미지
-└── gan_gen_imgs/          # GAN 생성 이미지
+├── gan_gen_imgs/          # GAN 생성 이미지
+├── VAE_output.png         # VAE 학습 곡선 그래프
+├── GAN_output.png         # GAN 학습 곡선 그래프
+└── README.md              # 프로젝트 설명 문서
 ```
 
 ## 모델 구성
@@ -28,6 +31,7 @@ MNIST 데이터셋을 활용한 VAE(Variational Autoencoder)와 GAN(Generative A
 ## 실험 결과
 
 ### VAE 성능
+![VAE Training Curves](VAE_output.png)
 ![VAE Generation Results](vae_gen_imgs/gen_02300.png)
 ![VAE Reconstruction Results](vae_recon_imgs/recon_02300.png)
 
@@ -37,6 +41,7 @@ MNIST 데이터셋을 활용한 VAE(Variational Autoencoder)와 GAN(Generative A
 - 생성 이미지: 약간 흐리지만 명확한 숫자 형태
 
 ### GAN 성능
+![GAN Training Curves](GAN_output.png)
 ![GAN Generation Results](gan_gen_imgs/gen_09300.png)
 
 - 안정화 기법 적용 후 성공적 학습
